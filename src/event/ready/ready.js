@@ -25,7 +25,7 @@ module.exports =  class ReadyEvent extends BaseEvent {
                         }
                     }
                 })
-            } else if (command == "echo") {
+            } else if (command == "embed") {
                 const content = args.find(arg => arg.name.toLowerCase() == "content").value;
                 let embed = new Discord.MessageEmbed()
                     .setTitle(content)
