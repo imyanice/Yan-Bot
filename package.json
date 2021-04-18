@@ -1,0 +1,22 @@
+{
+  "name": "yan--bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Yan-Jobs",
+    "email": "yan@yanjobs.me",
+    "url": "https://www.yanjobs.me/"
+  },
+  "scripts": {
+    "start": "node ./src/index.js",
+    "dev": "nodemon ./src/index.js"
+  },
+  "dependencies": {
+    "discord-canvas": "^1.4.1",
+    "discord.js": "^12.5.3",
+    "fs": "^0.0.1-security",
+    "nodemon": "^2.0.7",
+    "path": "^0.12.7"
+  }
+}
