@@ -4,6 +4,7 @@ const settings = require("../../../config");
 module.exports =  class ReadyEvent extends BaseEvent {
     constructor() {
         super("ready");
+
     }
 
     async run (client) {
@@ -15,8 +16,8 @@ module.exports =  class ReadyEvent extends BaseEvent {
         client.ws.on('INTERACTION_CREATE', async interaction => {
             const command = interaction.data.name.toLowerCase();
             const args = interaction.data.options;
-            const commandRegistered = client.commands.get(cmdName);
-            if (command == commandRegistered) {
+            const commandRegistered = client.commands.get(command);
+            if (commandRegistered) {
                 commandRegistered.run(client, interaction, args)
             }
         })
