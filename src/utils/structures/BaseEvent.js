@@ -1,5 +1,5 @@
 module.exports = class BaseCommand {
-    constructor(name) {
-        this.name = name;
-    }
-}
+  constructor(name) {
+    this.name = name;
+  }
+};
