@@ -8,7 +8,6 @@ module.exports = class ReadyEvent extends BaseEvent {
   }
 
   async run(client, connection) {
-
     console.log(
       `Logged as ${client.user.tag} in ${client.guilds.cache.size} !`
     ); // Console log ready

@@ -4,7 +4,7 @@ const BaseCommand = require("./structures/BaseCommand");
 const BaseEvent = require("./structures/BaseEvent");
 let connection;
 
-(async ()=> {
+(async () => {
   connection = await require("../../database/db");
 })();
 async function registerCommands(client, dir = "") {
