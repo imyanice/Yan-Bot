@@ -2,7 +2,11 @@ const path = require("path");
 const fs = require("fs").promises;
 const BaseCommand = require("./structures/BaseCommand");
 const BaseEvent = require("./structures/BaseEvent");
+let connection;
 
+(async ()=> {
+  connection = await require("../../database/db");
+})();
 async function registerCommands(client, dir = "") {
   const filePath = path.join(__dirname, dir);
   const files = await fs.readdir(filePath);
@@ -30,7 +34,7 @@ async function registerEvents(client, dir = "") {
       const Event = require(path.join(filePath, file));
       if (Event.prototype instanceof BaseEvent) {
         const event = new Event();
-        client.on(event.name, event.run.bind(event, client));
+        client.on(event.name, event.run.bind(event, client, connection));
       }
     }
   }

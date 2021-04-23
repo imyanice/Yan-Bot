@@ -1,12 +1,14 @@
 const BaseEvent = require("../../utils/structures/BaseEvent");
 const Discord = require("discord.js");
 const settings = require("../../../config");
+
 module.exports = class ReadyEvent extends BaseEvent {
   constructor() {
     super("ready");
   }
 
-  async run(client) {
+  async run(client, connection) {
+
     console.log(
       `Logged as ${client.user.tag} in ${client.guilds.cache.size} !`
     ); // Console log ready
@@ -19,7 +21,7 @@ module.exports = class ReadyEvent extends BaseEvent {
       const args = interaction.data.options;
       const commandRegistered = client.commands.get(command);
       if (commandRegistered) {
-        commandRegistered.run(client, interaction, args);
+        commandRegistered.run(client, interaction, args, connection);
       }
     });
   }

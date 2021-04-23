@@ -4,8 +4,6 @@ const settings = require("../config");
 
 const client = new Discord.Client();
 
-client.on("ready", async () => {});
-
 (async () => {
   client.login(settings.token).catch((e) => console.log(e));
   client.commands = new Map();
