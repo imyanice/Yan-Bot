@@ -1,8 +1,8 @@
 {
-  "name": "yan--bot",
+  "name": "yan-bot",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT",
+  "license": "GPL-3.0",
   "author": {
     "name": "Yan-Jobs",
     "email": "yan@yanjobs.me",
@@ -11,7 +11,10 @@
   "scripts": {
     "start": "node ./src/index.js",
     "dev": "nodemon ./src/index.js",
-    "clean": "prettier -w ."
+    "clean": "prettier -w .",
+    "build": "pm2 start ./src/index.js",
+    "logs": "pm2 logs",
+    "stop": "pm2 stop index"
   },
   "dependencies": {
     "discord-canvas": "^1.4.1",
