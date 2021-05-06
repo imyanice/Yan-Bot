@@ -20,7 +20,7 @@
     "discord-canvas": "^1.4.1",
     "discord.js": "^12.5.3",
     "fs": "^0.0.1-security",
-    "mysql2": "^2.2.5",
+    "mysql": "^2.18.1",
     "nodemon": "^2.0.7",
     "path": "^0.12.7"
   },

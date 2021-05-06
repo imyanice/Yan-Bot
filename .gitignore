@@ -3,3 +3,4 @@ node_modules/
 yan--bot.iml
 config.js
 ca-certificate.crt
+database/ca-certificate.crt

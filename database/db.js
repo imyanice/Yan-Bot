@@ -1,4 +1,4 @@
-const mysql = require("mysql2");
+const mysql = require("mysql");
 const settings = require("../config");
 const fs = require("fs");
 
@@ -8,8 +8,9 @@ const connection = new mysql.createConnection({
   database: settings.db.db_name,
   password: settings.db.mdp,
   ssl: {
-    ca : fs.readFileSync('/ca-certificate.crt')
-  }
+    ca : fs.readFileSync(__dirname + '/ca-certificate.crt')
+  },
+  port: settings.db.port,
 });
 
 module.exports = connection;
