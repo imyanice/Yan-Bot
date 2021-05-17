@@ -9,7 +9,7 @@ module.exports = class Hi extends BaseCommand {
       data: {
         type: 4,
         data: {
-          content: "Hello world",
+          content: "Hello world !",
         },
       },
     });

@@ -12,7 +12,7 @@ module.exports = (client) => {
       //Post hello  command
       data: {
         name: "hello",
-        description: "just testing",
+        description: "Reply with Hello because I LOVE U !",
       },
     });
 };

@@ -9,16 +9,16 @@ module.exports = (client) => {
     .applications(client.user.id)
     .guilds(settings.guild_owner_id)
     .commands.post({
-      //post embed command to the api
+      //post ban command to the api
       data: {
-        name: "embed",
-        description: "Change your content to an embed",
+        name: "ban",
+        description: "Ban an user",
 
         options: [
           {
-            name: "content",
-            description: "Content of the embed",
-            type: 3,
+            name: "user",
+            description: "User to ban from this guild.",
+            type: 6,
             required: true,
           },
         ],
