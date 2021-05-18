@@ -15,6 +15,13 @@ module.exports = class ReadyEvent extends BaseEvent {
     require("../../slashCommands/hello")(client);
     require("../../slashCommands/embed")(client);
     require("../../slashCommands/ban")(client);
-    
+    client.ws.on("INTERACTION_CREATE", async (interaction) => {
+      const command = interaction.data.name.toLowerCase();
+      const args = interaction.data.options;
+      const commandRegistered = client.commands.get(command);
+      if (commandRegistered) {
+        commandRegistered.run(client, interaction, args, connection);
+      }
+    });
   }
 };
