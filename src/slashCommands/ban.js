@@ -12,7 +12,7 @@ module.exports = (client) => {
       //post ban command to the api
       data: {
         name: "ban",
-        description: "Ban an user",
+        description: "Ban a user",
 
         options: [
           {

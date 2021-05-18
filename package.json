@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "discord-canvas": "^1.4.1",
-    "discord.js": "^12.5.3",
+    "discord.js": "discordjs/discord.js",
     "fs": "^0.0.1-security",
     "mysql": "^2.18.1",
     "nodemon": "^2.0.7",
