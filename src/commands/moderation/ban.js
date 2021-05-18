@@ -4,7 +4,7 @@ module.exports = class Ban extends BaseCommand {
   constructor() {
     super("ban", "moderation", []);
   }
-  async run(client, interaction, args) {
+  async run(interaction, client, args) {
     
     let msg = `Succesfully banned <@${interaction.data.options[0].value}>`;
     let authorId = interaction.member.user.id;
