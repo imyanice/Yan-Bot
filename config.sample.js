@@ -1,4 +1,4 @@
-const settings = {
+module.exports = {
   token: "", //your bot token
   guild_owner_id: "", //the guild owner id where you want to post your changement.
   db: {
@@ -6,7 +6,6 @@ const settings = {
     db_name: "",
     user: "",
     mdp: "",
+    port: "",
   },
 };
-
-module.exports = settings;

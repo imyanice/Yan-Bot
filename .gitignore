@@ -1,6 +1,18 @@
+# Modules
+yarn.lock
 node_modules/
+
+# IDE
 .idea/
-yan--bot.iml
+yan-bot.iml
+
+# Configuration file
 config.js
-ca-certificate.crt
+
+# Database
 database/ca-certificate.crt
+giveaways.json
+
+# Prettier
+.prettierrc.json
+.prettierignore
