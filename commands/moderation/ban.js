@@ -5,6 +5,8 @@ module.exports = class Ban extends BaseCommand {
     super("ban", "moderation", []);
   }
   async run(client, interaction, args) {
-    await interaction.reply("🛠 Sorry, but this command is in hardly developpement...");
-  } 
+    await interaction.reply(
+      "🛠 Sorry, but this command is in hardly developpement..."
+    );
+  }
 };

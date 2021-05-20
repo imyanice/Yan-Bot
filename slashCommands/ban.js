@@ -19,5 +19,7 @@ module.exports = async (client) => {
       },
     ],
   };
-    await client.guilds.cache.get(client.config.guild_owner_id)?.commands.create(data);
+  await client.guilds.cache
+    .get(client.config.guild_owner_id)
+    ?.commands.create(data);
 };
