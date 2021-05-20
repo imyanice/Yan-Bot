@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const { registerEvents, registerCommands } = require("./utils/handler");
-const settings = require("../config");
+const settings = require("./config");
 
 const client = new Discord.Client({
   intents: [

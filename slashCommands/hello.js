@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-const settings = require("../../config");
+const settings = require("../config");
 /**
  * @param {Discord.Client} client
  */

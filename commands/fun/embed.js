@@ -1,4 +1,4 @@
-const BaseCommand = require("../../utils/structures/BaseCommand");
+const BaseCommand = require("../../base/BaseCommand");
 const Discord = require("discord.js");
 module.exports = class Embed extends BaseCommand {
   constructor() {

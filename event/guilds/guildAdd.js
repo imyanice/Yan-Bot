@@ -1,4 +1,4 @@
-const BaseEvent = require("../../utils/structures/BaseEvent");
+const BaseEvent = require("../../base/BaseEvent");
 module.exports = class guildAddEvent extends BaseEvent {
   constructor() {
     super("guildCreate");

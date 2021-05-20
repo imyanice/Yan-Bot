@@ -1,6 +1,6 @@
-const BaseEvent = require("../../utils/structures/BaseEvent");
+const BaseEvent = require("../../base/BaseEvent");
 const Discord = require("discord.js");
-const settings = require("../../../config");
+const settings = require("../../config");
 
 module.exports = class ReadyEvent extends BaseEvent {
   constructor() {
