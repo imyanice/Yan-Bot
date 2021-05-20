@@ -9,7 +9,8 @@ module.exports = class ReadyEvent extends BaseEvent {
 
   async run(client, connection) {
     client.logger.log(
-      `Logged as ${client.user.tag} in ${client.guilds.cache.size} !`, "ready"
+      `Logged as ${client.user.tag} in ${client.guilds.cache.size} !`,
+      "ready"
     ); // Console log ready
 
     require("../../slashCommands/hello")(client);

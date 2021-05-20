@@ -19,7 +19,10 @@ async function registerCommands(client, dir = "") {
       if (Command.prototype instanceof BaseCommand) {
         const cmd = new Command();
         client.commands.set(cmd.name, cmd);
-        client.logger.log("🎉 Succesfully registered " + cmd.name + " command !", "cmd");
+        client.logger.log(
+          "🎉 Succesfully registered " + cmd.name + " command !",
+          "cmd"
+        );
       }
     }
   }
@@ -35,7 +38,10 @@ async function registerEvents(client, dir = "") {
       const Event = require(path.join(filePath, file));
       if (Event.prototype instanceof BaseEvent) {
         const event = new Event();
-                client.logger.log("🎉 Succesfully registered " + event.name + " event !", "cmd");
+        client.logger.log(
+          "🎉 Succesfully registered " + event.name + " event !",
+          "cmd"
+        );
         client.on(event.name, event.run.bind(event, client, connection));
       }
     }
