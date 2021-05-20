@@ -1,9 +1,10 @@
 const BaseCommand = require("../../base/BaseCommand");
 const Discord = require("discord.js");
+
 module.exports = class Embed extends BaseCommand {
   constructor() {
     super("embed", "fun", []);
-  }
+  };
   async run(client, interaction, args) {
     const content = args.find((arg) => arg.name.toLowerCase() == "content")
       .value;

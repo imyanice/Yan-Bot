@@ -3,11 +3,13 @@ module.exports = class guildAddEvent extends BaseEvent {
   constructor() {
     super("guildCreate");
   }
-  async run(client, guild, connection) {
+  async run(client, connection, guild) {
+    console.log(guild);
     try {
+      
       connection.query("INSERT INTO channels (guildId) VALUES (?)", [guild.id]);
-      console.log(
-        `"GUILD" ${guild.name} a ajouté le bot (id :${guild.id} owner: ${guild.owner.tag}, id: ${guild.owner.id}).`
+      client.logger.log(
+        `"GUILD" ${guild.name} a ajouté le bot (id :${guild.id}, owner id: ${guild.ownerID}).`, "log"
       );
     } catch (err) {
       console.log(err);
