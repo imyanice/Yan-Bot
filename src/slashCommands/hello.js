@@ -5,11 +5,9 @@ const settings = require("../../config");
  */
 
 module.exports = async (client) => {
-
-      //Post hello  command
-      const data= {
-        name: "hello",
-        description: "Reply with Hello because I LOVE U !",
-      };
-    
+  //Post hello  command
+  const data = {
+    name: "hello",
+    description: "Reply with Hello because I LOVE U !",
+  };
 };

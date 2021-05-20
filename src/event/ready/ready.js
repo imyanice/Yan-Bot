@@ -15,6 +15,5 @@ module.exports = class ReadyEvent extends BaseEvent {
     require("../../slashCommands/hello")(client);
     require("../../slashCommands/embed")(client);
     require("../../slashCommands/ban")(client);
-    
   }
 };

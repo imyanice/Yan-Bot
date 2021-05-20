@@ -8,7 +8,7 @@ const connection = new mysql.createConnection({
   database: settings.db.db_name,
   password: settings.db.mdp,
   ssl: {
-    ca : fs.readFileSync(__dirname + '/ca-certificate.crt')
+    ca: fs.readFileSync(__dirname + "/ca-certificate.crt"),
   },
   port: settings.db.port,
 });

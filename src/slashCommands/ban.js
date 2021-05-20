@@ -5,21 +5,19 @@ const settings = require("../../config");
  */
 
 module.exports = async (client) => {
+  //post ban command to the api
+  const data = {
+    name: "ban",
+    description: "Ban a user",
 
-      //post ban command to the api
-      const data = {
-        name: "ban",
-        description: "Ban a user",
-
-        options: [
-          {
-            name: "user",
-            description: "User to ban from this guild.",
-            type: 6,
-            required: true,
-          },
-        ],
-      };
-      await client.guilds.cache.get(settings.guild_owner_id)?.commands.create(data);
-    
+    options: [
+      {
+        name: "user",
+        description: "User to ban from this guild.",
+        type: 6,
+        required: true,
+      },
+    ],
+  };
+  await client.guilds.cache.get(settings.guild_owner_id)?.commands.create(data);
 };
