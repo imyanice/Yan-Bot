@@ -1,3 +1,3 @@
-# Yan--Bot
-# His creator is very intelligent
-# And that's true
+# Yan-Bot
+# IT IS CURRENTLY IN DEVELOPEMENT DON'T SEND ME MSGs BECAUSE IT DOESN'T WORK. THERE IS SOME BUGS AND MISTAKES.
+# THANKS !
