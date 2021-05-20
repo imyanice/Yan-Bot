@@ -57,6 +57,14 @@ module.exports = class Logger {
           `${date} ${black.bgGreen(type.toUpperCase())} ${content}`
         );
       }
+      /*
+        Made by me :)
+      */
+      case "event": {
+        return console.log(
+          `${date} ${black.bgWhite(type.toUpperCase())} ${content}`
+          );
+      }
       default:
         throw new TypeError(
           "Logger type must be either warn, log, ready, cmd or error."

@@ -40,7 +40,7 @@ async function registerEvents(client, dir = "") {
         const event = new Event();
         client.logger.log(
           "🎉 Succesfully registered " + event.name + " event !",
-          "cmd"
+          "event"
         );
         client.on(event.name, event.run.bind(event, client, connection));
       }
