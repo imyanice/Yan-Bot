@@ -7,11 +7,13 @@ module.exports = class InteractionEvent extends BaseEvent {
     super("interaction");
   }
 
-  async run(client, interaction) {
+  async run(client, connection, interaction) {
 
+    console.log(interaction);
     
-      const command = interaction.name;
-      const args = interaction.data.options;
+      const command = interaction.commandName;
+      console.log(command);
+      const args = interaction.options[0];
       const commandRegistered = client.commands.get(command);
       if (commandRegistered) {
         commandRegistered.run(client, interaction, args, connection);

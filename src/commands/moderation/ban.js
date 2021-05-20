@@ -6,10 +6,10 @@ module.exports = class Ban extends BaseCommand {
   }
   async run(client, interaction, args) {
     
-    let msg = `Succesfully banned <@${interaction.data.options[0].value}>`;
-    let authorId = interaction.member.user.id;
-    let author = interaction.guild.members.cache.get(authorID);
-    if (author.permission.has("BAN_MEMBERS")) return console.log("works");
-    interaction.reply(msg);
+    let msg = `Succesfully banned <@${interaction.options[0].value}>`;
+    let authorId = interaction.user.id;
+    let author = interaction.member.guild.members.cache.get(authorId);
+    if (author.permissions.has("BAN_MEMBERS")) return console.log("works");
+    await interaction.reply(msg);
   }
 };
