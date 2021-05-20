@@ -10,4 +10,5 @@ module.exports = async (client) => {
     name: "hello",
     description: "Reply with Hello because I LOVE U !",
   };
+    await client.guilds.cache.get(settings.guild_owner_id)?.commands.create(data);
 };
