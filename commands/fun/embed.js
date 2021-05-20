@@ -6,30 +6,13 @@ module.exports = class Embed extends BaseCommand {
     super("embed", "fun", []);
   };
   async run(client, interaction, args) {
-    const content = args.find((arg) => arg.name.toLowerCase() == "content")
-      .value;
+    let content = interaction.options[0].value;
+    let color = interaction.options[1].value || "#00e5ff";
     let embed = new Discord.MessageEmbed()
       .setTitle(content)
-      .setColor("#00e5ff");
+      .setColor(color);
+    await interaction.reply(embed);
 
-    client.api.interactions(interaction.id, interaction.token).callback.post({
-      data: {
-        type: 4,
-        data: await createAPIMessage(interaction, embed),
-      },
-    });
-    async function createAPIMessage(interaction, content) {
-      const apiMessage = await Discord.APIMessage.create(
-        client.channels.resolve(interaction.channel_id),
-        content
-      )
-        .resolveData()
-        .resolveFiles();
 
-      return {
-        ...apiMessage.data,
-        files: apiMessage.files,
-      };
-    }
   }
 };

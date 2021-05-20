@@ -17,6 +17,12 @@ module.exports = async (client) => {
         type: 3,
         required: true,
       },
+      {
+        name: "color",
+        description: "The embed color (in hexadecimal: #fff).",
+        type: 3,
+        required: false,
+      }
     ],
   };
     await client.guilds.cache.get(client.config.guild_owner_id)?.commands.create(data);
