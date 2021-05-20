@@ -4,13 +4,10 @@ const settings = require("../../config");
  * @param {Discord.Client} client
  */
 
-module.exports = (client) => {
-  client.api
-    .applications(client.user.id)
-    .guilds(settings.guild_owner_id)
-    .commands.post({
+module.exports = async (client) => {
+
       //post ban command to the api
-      data: {
+      const data = {
         name: "ban",
         description: "Ban a user",
 
@@ -22,6 +19,7 @@ module.exports = (client) => {
             required: true,
           },
         ],
-      },
-    });
+      };
+      await client.guilds.cache.get(settings.guild_owner_id)?.commands.create(data);
+    
 };

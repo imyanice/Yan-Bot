@@ -4,15 +4,12 @@ const settings = require("../../config");
  * @param {Discord.Client} client
  */
 
-module.exports = (client) => {
-  client.api
-    .applications(client.user.id)
-    .guilds(settings.guild_owner_id)
-    .commands.post({
+module.exports = async (client) => {
+
       //Post hello  command
-      data: {
+      const data= {
         name: "hello",
         description: "Reply with Hello because I LOVE U !",
-      },
-    });
+      };
+    
 };
