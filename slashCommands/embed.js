@@ -19,7 +19,7 @@ module.exports = async (client) => {
       },
       {
         name: "color",
-        description: "The embed color (in hexadecimal: #fff).",
+        description: "The color of the embed (in hexadecimal: #fff).",
         type: 3,
         required: false,
       }
