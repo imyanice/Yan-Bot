@@ -19,6 +19,16 @@ module.exports = class PostBanCommand extends BasePostCommand {
           type: 6,
           required: true,
         },
+        {
+          name: "reason",
+          description: "Why do you ban this user ?",
+          type: 3,
+        },
+        {
+          name: "days",
+          description: "Number of days of messages to delete, must be between 0 and 7.",
+          type: 4,
+        }
       ],
     };
     command.post(client, data, client.config.guild_owner_id);
