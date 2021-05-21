@@ -1,5 +1,9 @@
 const Yan = require("./base/Yan"),
-  { registerEvents, registerCommands } = require("./utils/handler"),
+  {
+    registerEvents,
+    registerCommands,
+    registerPostCommands,
+  } = require("./utils/handler"),
   settings = require("./config");
 
 const client = new Yan();
@@ -7,6 +11,7 @@ const client = new Yan();
 const init = async () => {
   await registerCommands(client, "../commands");
   await registerEvents(client, "../events");
+  await registerPostCommands(client, "../slashCommands");
   client.login(client.config.token);
 };
 

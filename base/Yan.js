@@ -17,6 +17,7 @@ class Yan extends Client {
     this.config = require("../config");
     this.commands = new Map();
     this.events = new Map();
+    this.slashCmds = new Map();
     this.logger = require("../utils/logger");
     this.giveawaysManager = new GiveawaysManager(this, {
       storage: "./giveaways.json",

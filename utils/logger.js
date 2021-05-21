@@ -63,7 +63,12 @@ module.exports = class Logger {
       case "event": {
         return console.log(
           `${date} ${black.bgWhite(type.toUpperCase())} ${content}`
-          );
+        );
+      }
+      case "/": {
+        return console.log(
+          `${date} ${black.bgWhite(type.toUpperCase())} ${content}`
+        );
       }
       default:
         throw new TypeError(
