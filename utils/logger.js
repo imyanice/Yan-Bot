@@ -28,10 +28,14 @@ function format(tDate) {
     dateTimePad(tDate.getMilliseconds(), 3)
   );
 }
+function convertTZ(date, tz) {
+    return new Date((typeof date === "string" ? new Date(date) : date).toLocaleString("en-US", {timeZone: tz}));   
+}
 
 module.exports = class Logger {
   static log(content, type = "log") {
-    const date = `[${format(new Date(Date.now()))}]:`;
+    const rawDate = new Date(Date.now())
+    const date = `[${format(convertTZ(rawDate, "Europe/Paris"))}]:`;
     switch (type) {
       // Check the message type and then print him in the console
       case "log": {
@@ -39,22 +43,22 @@ module.exports = class Logger {
       }
       case "warn": {
         return console.log(
-          `${date} ${black.bgYellow(type.toUpperCase())} ${content} `
+          `${date} ${black.bgYellow.bold(type.toUpperCase())} ${content} `
         );
       }
       case "error": {
         return console.log(
-          `${date} ${black.bgRed(type.toUpperCase())} ${content} `
+          `${date} ${black.bgRed.bold(type.toUpperCase())} ${content} `
         );
       }
       case "cmd": {
         return console.log(
-          `${date} ${black.bgWhite(type.toUpperCase())} ${content}`
+          `${date} ${black.bgWhite.bold(type.toUpperCase())} ${content}`
         );
       }
       case "ready": {
         return console.log(
-          `${date} ${black.bgGreen(type.toUpperCase())} ${content}`
+          `${date} ${black.bgGreen.bold(type.toUpperCase())} ${content}`
         );
       }
       /*
@@ -62,12 +66,12 @@ module.exports = class Logger {
       */
       case "event": {
         return console.log(
-          `${date} ${black.bgWhite(type.toUpperCase())} ${content}`
+          `${date} ${black.bgWhite.bold(type.toUpperCase())} ${content}`
         );
       }
       case "/": {
         return console.log(
-          `${date} ${black.bgWhite(type.toUpperCase())} ${content}`
+          `${date} ${black.bgWhite.bold(type.toUpperCase())} ${content}`
         );
       }
       default:
