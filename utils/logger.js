@@ -29,12 +29,16 @@ function format(tDate) {
   );
 }
 function convertTZ(date, tz) {
-    return new Date((typeof date === "string" ? new Date(date) : date).toLocaleString("en-US", {timeZone: tz}));   
+  return new Date(
+    (typeof date === "string" ? new Date(date) : date).toLocaleString("en-US", {
+      timeZone: tz,
+    })
+  );
 }
 
 module.exports = class Logger {
   static log(content, type = "log") {
-    const rawDate = new Date(Date.now())
+    const rawDate = new Date(Date.now());
     const date = `[${format(convertTZ(rawDate, "Europe/Paris"))}]:`;
     switch (type) {
       // Check the message type and then print him in the console
