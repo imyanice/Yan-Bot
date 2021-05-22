@@ -1,5 +1,5 @@
-const PostCommand = require("../../base/PostGuildCommand");
-const BasePostCommand = require("../../base/BasePostCommand");
+const PostCommand = require("../../../base/PostGuildCommand");
+const BasePostCommand = require("../../../base/BasePostCommand");
 
 module.exports = class PostEmbedCommand extends BasePostCommand {
   constructor() {

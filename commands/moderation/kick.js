@@ -2,9 +2,9 @@ const BaseCommand = require("../../base/BaseCommand");
 
 module.exports = class Kick extends BaseCommand {
   constructor() {
-    super("kick", "moderation", []);
+    super("kick", "moderation");
   }
-  async run(client, interaction, args) {
+  async run(client, interaction) {
     const author = interaction.member.guild.members.cache.get(
       interaction.user.id
     );

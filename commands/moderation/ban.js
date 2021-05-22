@@ -2,9 +2,9 @@ const BaseCommand = require("../../base/BaseCommand");
 
 module.exports = class Ban extends BaseCommand {
   constructor() {
-    super("ban", "moderation", []);
+    super("ban", "moderation");
   }
-  async run(client, interaction, args) {
+  async run(client, interaction) {
     const author = interaction.member.guild.members.cache.get(
       interaction.user.id
     );
