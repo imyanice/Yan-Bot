@@ -13,7 +13,7 @@ module.exports = class Kick extends BaseCommand {
     );
     const kickReason = interaction.options[1].value;
     if (author.permissions.has("KICK_MEMBERS")) {
-      await userToKick.kick({ reason: banReason }).catch((e) => {
+      await userToKick.kick({ reason: kickReason }).catch((e) => {
         client.logger.log(e, "err");
         interaction.reply(
           "<:YJ_error:845314543118844014> An error occured, please try again later, *it is maybe caused because I don't have the required permissions (kick members) or the user to kick have a higher role than me*."

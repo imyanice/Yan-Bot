@@ -6,7 +6,7 @@ module.exports = class PostKickCommand extends BasePostCommand {
     super("kick");
   }
   async run(client) {
-    //post kick command to the api 
+    //post kick command to the api
     const command = new PostCommand();
     const data = {
       name: "kick",
@@ -23,7 +23,7 @@ module.exports = class PostKickCommand extends BasePostCommand {
           name: "reason",
           description: "Why do you want to kick this user ?",
           type: 3,
-        }
+        },
       ],
     };
     command.post(client, data, client.config.guild_owner_id);
