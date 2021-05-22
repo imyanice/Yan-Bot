@@ -1,7 +1,7 @@
 /* 
    Simple logger made by @Androz2091 (https://github.com/Androz2091)
 */
-const { bgBlue, black, green } = require("chalk");
+const { bgBlue, black } = require("chalk");
 
 function dateTimePad(value, digits) {
   let number = value;
