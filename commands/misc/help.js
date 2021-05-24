@@ -31,7 +31,7 @@ module.exports = class Hi extends BaseCommand {
           )
         .addField(
           "Commands: ",
-          "<:YJ_SashCommands:846034021368332319> `embed`, Transform your content as en embed,\n<:YJ_SashCommands:846034021368332319> `hello`, Reply with `Hello world !`, \n**Add much more adding later !**"
+          "<:YJ_SashCommands:846034021368332319> `embed`, Transform your content as en embed,\n<:YJ_SashCommands:846034021368332319> `hello`, Reply with `Hello world !`, \n**Much commands will be added later !**"
           )
         .setThumbnail("https://emoji.gg/assets/emoji/5262-sunglases-funny.png");
       await interaction.reply(embed);
@@ -42,12 +42,12 @@ module.exports = class Hi extends BaseCommand {
           )
         .addField(
           "Commands: ",
-          "<:YJ_SashCommands:846034021368332319> `ban`, Ban a user *(ban users permission required)*,\n<:YJ_SashCommands:846034021368332319> `kick`, Kick a user *(kick users permission required)*,\n**Add much more adding later !**"
+          "<:YJ_SashCommands:846034021368332319> `ban`, Ban a user *(ban users permission required)*,\n<:YJ_SashCommands:846034021368332319> `kick`, Kick a user *(kick users permission required)*,\n<:YJ_SashCommands:846034021368332319> `clear`, Clear a number of message between 2 and 100 *(manage message permission required)*.\n**Much commands will be added later !**"
           )
         .setThumbnail("https://emoji.gg/assets/emoji/9175_moderation_hammer.png");
       await interaction.reply(embed);
     } else {
-      await interaction.reply("**Sorry this category was not found. Please try with the following:** `moderation`, `fun`, `misc`.")
+      await interaction.reply("**Sorry this category was not found. Please try with the following:** `moderation`, `fun`.")
     }
   }
 };
