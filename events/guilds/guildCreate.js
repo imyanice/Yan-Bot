@@ -7,6 +7,7 @@ module.exports = class GuildAddEvent extends BaseEvent {
     console.log(guild);
     try {
       connection.query("INSERT INTO channels (guildId) VALUES (?)", [guild.id]);
+      connection.query("INSERT INTO roles (guildId) VALUES (?)", [guild.id]);
       client.logger.log(
         `"GUILD" ${guild.name} has just added the bot (id :${guild.id}, owner id: ${guild.ownerID}).`,
         "log"

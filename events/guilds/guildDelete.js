@@ -6,6 +6,7 @@ module.exports = class GuildDeleteEvent extends BaseEvent {
   async run(client, connection, guild) {
     try {
       connection.query("DELETE FROM `channels` WHERE `guildId`=?", [guild.id]);
+      connection.query("DELETE FROM `roles` WHERE `guildId`=?", [guild.id]);
       client.logger.log(
         `"GUILD" ${guild.name} has just removed the bot (id :${guild.id}, owner id: ${guild.ownerID}) !`,
         "log"

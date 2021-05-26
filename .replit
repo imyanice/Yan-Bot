@@ -1,2 +1,2 @@
 language = "nodejs"
-run = "yarn remove discord.js && chmod +x node.sh && ./node.sh"
+run = "chmod +x node.sh && ./node.sh"

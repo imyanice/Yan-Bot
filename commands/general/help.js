@@ -3,7 +3,7 @@ const BaseCommand = require("../../base/BaseCommand"),
 
 module.exports = class Hi extends BaseCommand {
   constructor() {
-    super("help", "misc");
+    super("help", "general");
   }
   async run(client, interaction) {
     let embed = new MessageEmbed()

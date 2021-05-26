@@ -14,7 +14,8 @@
     "clean": "prettier -w .",
     "build": "pm2 start yan.js",
     "logs": "pm2 logs",
-    "stop": "pm2 stop yan"
+    "stop": "pm2 stop yan",
+    "query": "nodemon ./database/db.js"
   },
   "dependencies": {
     "chalk": "^4.1.1",
