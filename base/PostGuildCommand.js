@@ -1,12 +1,12 @@
 module.exports = class PostCommand {
-  constructor(name, client) {
-    this.name = name;
-  }
+	constructor(name, client) {
+		this.name = name;
+	}
 
-  async post(client, data, guild) {
-    await client.guilds.cache
-      .get(guild)
-      ?.commands.create(data)
-      .catch((e) => client.logger.log(e, "error"));
-  }
+	async post(client, data, guild) {
+		await client.guilds.cache
+			.get(guild)
+			?.commands.create(data)
+			.catch((e) => client.logger.log(e, "error"));
+	}
 };

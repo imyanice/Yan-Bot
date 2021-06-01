@@ -16,3 +16,6 @@ giveaways.json
 # Prettier
 .prettierrc.json
 .prettierignore
+
+# In dev
+events/members
