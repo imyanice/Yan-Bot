@@ -17,7 +17,8 @@
 		"stop": "pm2 stop yan",
 		"query": "nodemon ./database/db.js",
 		"lint": "eslint .",
-		"lint-fix": "eslint . --fix"
+		"lint-fix": "eslint . --fix",
+		"line": "git ls-files | grep "\(.html\|.css\|.js\|.java\)$" | xargs wc -l"
 	},
 	"dependencies": {
 		"chalk": "^4.1.1",
