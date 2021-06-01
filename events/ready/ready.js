@@ -1,12 +1,11 @@
 const BaseEvent = require("../../base/BaseEvent");
-const Discord = require("discord.js");
 
 module.exports = class ReadyEvent extends BaseEvent {
 	constructor() {
 		super("ready");
 	}
 
-	async run(client, connection) {
+	async run(client) {
 		client.logger.log(
 			`Logged as ${client.user.tag} in ${client.guilds.cache.size} !`,
 			"ready"
@@ -15,7 +14,7 @@ module.exports = class ReadyEvent extends BaseEvent {
 			client.slashCmds
 				.get(cmd.name)
 				.run(client)
-				.then((run) => {
+				.then(() => {
 					client.logger.log(
 						"🎉  Succesfully posted " + cmd.name + " command !",
 						"/"

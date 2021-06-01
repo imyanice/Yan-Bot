@@ -1,5 +1,4 @@
 const BaseEvent = require("../../base/BaseEvent");
-const Discord = require("discord.js");
 
 module.exports = class InteractionEvent extends BaseEvent {
 	constructor() {

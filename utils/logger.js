@@ -42,46 +42,46 @@ module.exports = class Logger {
 		const date = `[${format(convertTZ(rawDate, "Europe/Paris"))}]:`;
 		switch (type) {
 		// Check the message type and then print him in the console
-		case "log": {
-			return console.log(`${date} ${bgBlue(type.toUpperCase())} ${content} `);
-		}
-		case "warn": {
-			return console.log(
-				`${date} ${black.bgYellow.bold(type.toUpperCase())} ${content} `
-			);
-		}
-		case "error": {
-			return console.log(
-				`${date} ${black.bgRed.bold(type.toUpperCase())} ${content} `
-			);
-		}
-		case "cmd": {
-			return console.log(
-				`${date} ${black.bgWhite.bold(type.toUpperCase())} ${content}`
-			);
-		}
-		case "ready": {
-			return console.log(
-				`${date} ${black.bgGreen.bold(type.toUpperCase())} ${content}`
-			);
-		}
-		/*
+			case "log": {
+				return console.log(`${date} ${bgBlue(type.toUpperCase())} ${content} `);
+			}
+			case "warn": {
+				return console.log(
+					`${date} ${black.bgYellow.bold(type.toUpperCase())} ${content} `
+				);
+			}
+			case "error": {
+				return console.log(
+					`${date} ${black.bgRed.bold(type.toUpperCase())} ${content} `
+				);
+			}
+			case "cmd": {
+				return console.log(
+					`${date} ${black.bgWhite.bold(type.toUpperCase())} ${content}`
+				);
+			}
+			case "ready": {
+				return console.log(
+					`${date} ${black.bgGreen.bold(type.toUpperCase())} ${content}`
+				);
+			}
+			/*
         Made by me :)
       */
-		case "event": {
-			return console.log(
-				`${date} ${black.bgWhite.bold(type.toUpperCase())} ${content}`
-			);
-		}
-		case "/": {
-			return console.log(
-				`${date} ${black.bgWhite.bold(type.toUpperCase())} ${content}`
-			);
-		}
-		default:
-			throw new TypeError(
-				"Logger type must be either warn, log, ready, cmd or error."
-			);
+			case "event": {
+				return console.log(
+					`${date} ${black.bgWhite.bold(type.toUpperCase())} ${content}`
+				);
+			}
+			case "/": {
+				return console.log(
+					`${date} ${black.bgWhite.bold(type.toUpperCase())} ${content}`
+				);
+			}
+			default:
+				throw new TypeError(
+					"Logger type must be either warn, log, ready, cmd or error."
+				);
 		}
 	}
 };

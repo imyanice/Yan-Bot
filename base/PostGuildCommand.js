@@ -1,5 +1,5 @@
 module.exports = class PostCommand {
-	constructor(name, client) {
+	constructor(name,) {
 		this.name = name;
 	}
 

@@ -1,5 +1,4 @@
 const BaseCommand = require("../../base/BaseCommand");
-const { MessageEmbed } = require("discord.js");
 
 module.exports = class ModLog extends BaseCommand {
 	constructor() {
