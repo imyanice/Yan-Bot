@@ -9,11 +9,15 @@
 		"ecmaVersion": 2021
 	},
 	"rules": {
-		"indent": ["warn", "tab", {
-		"SwitchCase": 1
-		}],
+		"indent": [
+			1,
+			"tab",
+			{
+				"SwitchCase": 1
+			}
+		],
 		"linebreak-style": 0,
-		"quotes": ["error", "double"],
-		"semi": ["error", "always"]
+		"quotes": ["warn", "double"],
+		"semi": ["warn", "always"]
 	}
 }

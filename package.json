@@ -17,14 +17,13 @@
 		"stop": "pm2 stop yan",
 		"query": "nodemon ./database/db.js",
 		"lint": "eslint .",
-		"lint-fix": "eslint . --fix",
-		"line": "git ls-files | grep "\(.html\|.css\|.js\|.java\)$" | xargs wc -l"
+		"lint-fix": "eslint . --fix"
 	},
 	"dependencies": {
 		"chalk": "^4.1.1",
 		"discord-canvas": "^1.4.1",
 		"discord-giveaways": "^4.5.1",
-		"discord.js": "^12.5.3",
+		"discord.js": "discordjs/discord.js",
 		"fs": "^0.0.1-security",
 		"moment": "^2.29.1",
 		"mysql": "^2.18.1",

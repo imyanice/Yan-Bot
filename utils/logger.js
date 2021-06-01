@@ -41,7 +41,7 @@ module.exports = class Logger {
 		const rawDate = new Date(Date.now());
 		const date = `[${format(convertTZ(rawDate, "Europe/Paris"))}]:`;
 		switch (type) {
-		// Check the message type and then print him in the console
+			// Check the message type and then print him in the console
 			case "log": {
 				return console.log(`${date} ${bgBlue(type.toUpperCase())} ${content} `);
 			}
