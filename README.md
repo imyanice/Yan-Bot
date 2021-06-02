@@ -3,8 +3,8 @@
 # Template-JS
   
 [![CodeFactor](https://www.codefactor.io/repository/github/yan-jobs/yan-bot/badge)](https://www.codefactor.io/repository/github/yan-jobs/yan-bot)
-![](https://shields.io/github/license/Yan-Jobs/template-js)
-![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FYan-Jobs%2Fyan-bot.svg?type=shield)
+![](https://shields.io/github/license/Yan-Jobs/yan-bot)
+![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FYan-Jobs%2FYan-Bot.svg?type=shield)
 ![](https://img.shields.io/discord/831251454655594506.svg?logo=discord&colorB=7289DA&label=Yan%27s%20Dev)
 
   ## Installation
