@@ -1,23 +1,12 @@
 {
-	"env": {
-		"node": true,
-		"commonjs": true,
-		"es2021": true
-	},
-	"extends": "eslint:recommended",
-	"parserOptions": {
-		"ecmaVersion": 2021
-	},
-	"rules": {
-		"indent": [
-			1,
-			"tab",
-			{
-				"SwitchCase": 1
-			}
-		],
-		"linebreak-style": 0,
-		"quotes": ["warn", "double"],
-		"semi": ["warn", "always"]
-	}
+  "env": {
+    "node": true,
+    "commonjs": true,
+    "es2021": true
+  },
+  "extends": "plugin:prettier/recommended",
+  "parserOptions": {
+    "ecmaVersion": 2021
+  }
+  
 }

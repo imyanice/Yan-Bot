@@ -1,18 +1,11 @@
 {
-	"semi": true,
-	"singleQuote": false,
-	"overrides": [
-		{
-			"files": "*.test.js",
-			"options": {
-				"semi": true
-			}
-		},
-		{
-			"files": ["*.html", "legacy/**/*.js"],
-			"options": {
-				"tabWidth": 2
-			}
-		}
-	]
+  "printWidth": 80,
+  "tabWidth": 2,
+  "singleQuote": false,
+  "trailingComma": "none",
+  "bracketSpacing": true,
+  "semi": true,
+  "useTabs": false,
+  "parser": "babylon",
+  "jsxBracketSameLine": false
 }

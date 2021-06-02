@@ -1,38 +1,39 @@
 {
-	"name": "yan-bot",
-	"version": "1.0.0",
-	"main": "index.js",
-	"license": "GPL-3.0",
-	"author": {
-		"name": "Yan-Jobs",
-		"email": "yan@yanjobs.me",
-		"url": "https://www.yanjobs.me/"
-	},
-	"scripts": {
-		"start": "node yan.js",
-		"dev": "nodemon yan.js",
-		"clean": "prettier -w . --use-tabs",
-		"build": "pm2 start yan.js",
-		"logs": "pm2 logs",
-		"stop": "pm2 stop yan",
-		"query": "nodemon ./database/db.js",
-		"lint": "eslint .",
-		"lint-fix": "eslint . --fix"
-	},
-	"dependencies": {
-		"chalk": "^4.1.1",
-		"discord-canvas": "^1.4.1",
-		"discord-giveaways": "^4.5.1",
-		"discord.js": "discordjs/discord.js",
-		"fs": "^0.0.1-security",
-		"moment": "^2.29.1",
-		"mysql": "^2.18.1",
-		"nodemon": "^2.0.7",
-		"path": "^0.12.7"
-	},
-	"devDependencies": {
-		"eslint": "^7.27.0",
-		"pm2": "^4.5.6",
-		"prettier": "^2.2.1"
-	}
+  "name": "yan-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "GPL-3.0",
+  "author": {
+    "name": "Yan-Jobs",
+    "email": "yan@yanjobs.me",
+    "url": "https://www.yanjobs.me/"
+  },
+  "scripts": {
+    "start": "node yan.js",
+    "dev": "nodemon yan.js",
+    "clean": "prettier -w . ",
+    "build": "pm2 start yan.js",
+    "logs": "pm2 logs",
+    "stop": "pm2 stop yan",
+    "query": "nodemon ./database/db.js",
+    "lint": "eslint . --fix"
+  },
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "discord-canvas": "^1.4.1",
+    "discord-giveaways": "^4.5.1",
+    "discord.js": "^12.5.3",
+    "fs": "^0.0.1-security",
+    "moment": "^2.29.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.7",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint": "^7.27.0",
+    "pm2": "^4.5.6",
+    "prettier": "^2.2.1"
+  }
 }
