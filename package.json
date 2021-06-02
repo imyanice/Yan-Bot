@@ -11,6 +11,7 @@
   "scripts": {
     "start": "node yan.js",
     "dev": "nodemon yan.js",
+    "clean": "prettier -w . ",
     "build": "pm2 start yan.js",
     "logs": "pm2 logs",
     "stop": "pm2 stop yan",
