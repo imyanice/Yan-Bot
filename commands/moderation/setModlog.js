@@ -13,7 +13,6 @@ module.exports = class ModLog extends BaseCommand {
       await interaction.reply(
         "<a:YJ_greenverify:831535173816156160> Succesfully set the moderation channel to receive updates to: <#" +
           interaction.options.get("channel").value +
-        
           "> !"
       );
     } else {

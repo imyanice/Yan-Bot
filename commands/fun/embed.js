@@ -7,7 +7,7 @@ module.exports = class Embed extends BaseCommand {
   }
   async run(client, interaction) {
     let content = interaction.options.get("content").value;
-    let color =  interaction.options.get("color").value || "#00e5ff";
+    let color = interaction.options.get("color").value || "#00e5ff";
     let embed = new Discord.MessageEmbed().setTitle(content).setColor(color);
     await interaction.reply(embed);
   }
