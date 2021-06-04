@@ -5,7 +5,7 @@ module.exports = class ClearCommand extends BaseCommand {
     super("clear", "moderation");
   }
   async run(client, interaction) {
-    const numberofMsgs = interaction.options[0].value;
+    const numberofMsgs = interaction.options.get("message").value;
     if (
       interaction.member.guild.members.cache
         .get(interaction.user.id)

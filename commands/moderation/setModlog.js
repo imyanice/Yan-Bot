@@ -5,14 +5,15 @@ module.exports = class ModLog extends BaseCommand {
     super("modlog", "administration");
   }
   async run(client, interaction, connection) {
-    if (interaction.options[0]) {
+    if (interaction.options.get("channel")) {
       connection.query("UPDATE channels SET modLog=? WHERE `guildId`=?", [
-        interaction.options[0].value,
+        interaction.options.get("channel").value,
         interaction.member.guild.id,
       ]);
       await interaction.reply(
         "<a:YJ_greenverify:831535173816156160> Succesfully set the moderation channel to receive updates to: <#" +
-          interaction.options[0].value +
+          interaction.options.get("channel").value +
+        
           "> !"
       );
     } else {

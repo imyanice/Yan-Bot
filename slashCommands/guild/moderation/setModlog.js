@@ -14,8 +14,8 @@ module.exports = class PostModLogCommand extends BasePostCommand {
       description: "Show different options for the mod channels.",
       options: [
         {
-          name: "set",
-          description: "Set the mod channel.",
+          name: "channel",
+          description: "The channel to set.",
           type: 7,
         },
       ],

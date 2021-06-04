@@ -9,9 +9,9 @@ module.exports = class Kick extends BaseCommand {
       interaction.user.id
     );
     const userToKick = interaction.member.guild.members.cache.get(
-      interaction.options[0].value
+      interaction.options.get("user").value
     );
-    const kickReason = interaction.options[1].value;
+    const kickReason = interaction.options.get("reason").value;
     if (author.permissions.has("KICK_MEMBERS")) {
       await userToKick.kick({ reason: kickReason }).catch((e) => {
         client.logger.log(e, "err");

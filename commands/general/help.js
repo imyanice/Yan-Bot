@@ -8,7 +8,7 @@ module.exports = class Hi extends BaseCommand {
   async run(client, interaction) {
     let embed = new MessageEmbed().setTitle("Help menu");
 
-    if (!interaction.options[0]) {
+    if (!interaction.options.get("category")) {
       embed
         .addFields(
           {
@@ -27,7 +27,7 @@ module.exports = class Hi extends BaseCommand {
           '<:YJ_logo:831533916979593258> Dev by " Yan Jobs#0001 | Source code [here](https://github.com/Yan-Jobs/Yan-Bot) | Open Source :hearts: '
         );
       await interaction.reply(embed);
-    } else if (interaction.options[0].value === "fun") {
+    } else if (interaction.options.get("category").value === "fun") {
       embed
         .setTitle("<:YJ_fun:846032578745335848>  Fun commands")
         .setDescription(
@@ -39,7 +39,7 @@ module.exports = class Hi extends BaseCommand {
         )
         .setThumbnail("https://emoji.gg/assets/emoji/5262-sunglases-funny.png");
       await interaction.reply(embed);
-    } else if (interaction.options[0].value === "moderation") {
+    } else if (interaction.options.get("category").value === "moderation") {
       embed
         .setTitle("<:YJ_moderation:846044206077575209>  Moderation commands")
         .setDescription(

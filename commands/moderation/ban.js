@@ -9,10 +9,10 @@ module.exports = class Ban extends BaseCommand {
       interaction.user.id
     );
     const userToBan = interaction.member.guild.members.cache.get(
-      interaction.options[0].value
+      interaction.options.get("user").value
     );
-    const pruneDays = interaction.options[2].value;
-    const banReason = interaction.options[1].value;
+    const pruneDays = interaction.options.get("days").value;
+    const banReason = interaction.options.get("reason").value;
     if (author.permissions.has("BAN_MEMBERS")) {
       await userToBan.ban({ reason: banReason, days: pruneDays }).catch((e) => {
         client.logger.log(e, "err");
