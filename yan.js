@@ -13,7 +13,7 @@ const init = async () => {
   console.log(moment().format("YYYY/M/DD HH:MM"));
   await registerEvents(client, "../events");
   await registerPostCommands(client, "../slashCommands");
-  client.login(client.config.token);
+  await client.login(client.config.token);
 };
 
 init();

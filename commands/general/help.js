@@ -6,7 +6,7 @@ module.exports = class Hi extends BaseCommand {
     super("help", "general");
   }
   async run(client, interaction) {
-    let embed = new MessageEmbed().setTitle("Help menu");
+    const embed = new MessageEmbed().setTitle("Help menu");
 
     if (!interaction.options.get("category")) {
       embed

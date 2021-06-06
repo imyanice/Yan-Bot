@@ -20,7 +20,7 @@ module.exports = class ModLog extends BaseCommand {
         "SELECT * FROM channels WHERE guildId =?",
         [interaction.member.guild.id],
         async (error, result) => {
-          let channel = result[0].modLog;
+          const channel = result[0].modLog;
           await interaction.reply(
             "The channel set to receive updates is: <#" + channel + "> !"
           );

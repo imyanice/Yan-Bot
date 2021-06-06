@@ -19,7 +19,7 @@ async function registerCommands(client, dir = "") {
       const Command = require(path.join(filePath, file));
       if (Command.prototype instanceof BaseCommand) {
         const cmd = new Command();
-        client.commands.set(cmd.name, cmd);
+        await client.commands.set(cmd.name, cmd);
         client.logger.log(
           "🎉  Succesfully registered " + cmd.name + " command !",
           "cmd"

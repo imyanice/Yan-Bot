@@ -27,6 +27,6 @@ module.exports = class PostEmbedCommand extends BasePostCommand {
         },
       ],
     };
-    command.post(client, data, client.config.guild_owner_id);
+    await command.post(client, data, client.config.guild_owner_id);
   }
 };
