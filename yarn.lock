@@ -670,8 +670,8 @@ discord-giveaways@^4.5.1:
 
 discord.js@discordjs/discord.js:
   version "13.0.0-dev"
-  uid e980948de55e91e59c9e3293ac76bc645a058a53
-  resolved "https://codeload.github.com/discordjs/discord.js/tar.gz/e980948de55e91e59c9e3293ac76bc645a058a53"
+  uid c2b3ed09a0ec7f9b7453d0bcf9f2900e408f5001
+  resolved "https://codeload.github.com/discordjs/discord.js/tar.gz/c2b3ed09a0ec7f9b7453d0bcf9f2900e408f5001"
   dependencies:
     "@discordjs/collection" "^0.1.6"
     "@discordjs/form-data" "^3.0.1"
