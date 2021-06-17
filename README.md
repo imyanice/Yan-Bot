@@ -18,12 +18,6 @@
   
   
   ## Contributors
-  All of the contributors of this project are: 
-
-      - Androz2091 (Logger & base)
-      - Icons8 for emojis,
-      - And me !
-
   
   
   ## License
