@@ -17,7 +17,11 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/76485792?v=4",
       "profile": "https://yanjobs.me",
       "contributions": [
-        "ideas"
+        "ideas",
+        "code",
+        "content",
+        "doc",
+        "example"
       ]
     }
   ]
