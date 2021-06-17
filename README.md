@@ -1,6 +1,6 @@
 <div align="center">
 
-# Template-JS
+# Yan-Bot
   
 [![CodeFactor](https://www.codefactor.io/repository/github/yan-jobs/yan-bot/badge)](https://www.codefactor.io/repository/github/yan-jobs/yan-bot)
 ![](https://shields.io/github/license/Yan-Jobs/yan-bot)
