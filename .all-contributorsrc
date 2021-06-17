@@ -23,6 +23,15 @@
         "doc",
         "example"
       ]
+    },
+    {
+      "login": "Icons8",
+      "name": "Icons8",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6615749?v=4",
+      "profile": "https://icons8.com/",
+      "contributions": [
+        "design"
+      ]
     }
   ]
 }
