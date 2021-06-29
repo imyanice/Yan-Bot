@@ -24,7 +24,7 @@
     "discord.js": "discordjs/discord.js",
     "moment": "^2.29.1",
     "mysql": "^2.18.1",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.8"
   },
   "devDependencies": {
     "eslint": "^7.29.0",
