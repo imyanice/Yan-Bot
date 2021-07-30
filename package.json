@@ -19,7 +19,7 @@
     "lint": "eslint . --fix"
   },
   "dependencies": {
-    "chalk": "^4.1.1",
+    "chalk": "^4.1.2",
     "discord-giveaways": "^4.5.1",
     "discord.js": "discordjs/discord.js",
     "moment": "^2.29.1",
