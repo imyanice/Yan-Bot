@@ -1,3 +1,4 @@
+# DEPRECATED SEE BBIRD https://github.com/Yan-Jobs/BBird
 <div align="center">
 
 # Yan-Bot
